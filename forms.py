@@ -5,7 +5,7 @@ from flask_wtf import FlaskForm
 class RegisterForm(FlaskForm):
     '''register a user'''
 
-    name = StringField('User Name', validators=[InputRequired()],)
+    username = StringField('User Name', validators=[InputRequired()],)
 
     password = PasswordField('Password',validators=[InputRequired()],)
 
@@ -18,7 +18,7 @@ class RegisterForm(FlaskForm):
 class LoginForm(FlaskForm):
     '''login a user'''
 
-    name = StringField('User Name', validators=[InputRequired()],)
+    username = StringField('User Name', validators=[InputRequired()],)
 
     password = PasswordField('Password',validators=[InputRequired()],)
 
@@ -27,6 +27,7 @@ class FeedbackForm(FlaskForm):
 
     title = StringField('Title', validators=[InputRequired()],)
 
-    content = StringField('Content', validators[InputRequired()])
+    content = StringField('Content', validators=[InputRequired()])
 
 class DeleteForm(FlaskForm):
+    '''deleted'''
